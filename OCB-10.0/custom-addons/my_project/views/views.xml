@@ -1,0 +1,76 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="my_project.list">
+      <field name="name">My_project list</field>
+      <field name="model">my_project.my_project</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+
+        <record model="ir.ui.view" id="my_project.form">
+      <field name="name">My_project list</field>
+      <field name="model">my_project.my_project</field>
+      <field name="arch" type="xml">
+        <form>
+          <notebook>
+            <page string="My Tab">
+              <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+            </page>
+
+          </notebook>
+
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="my_project.action_window">
+      <field name="name">My_project window</field>
+      <field name="res_model">my_project.my_project</field>
+      <field name="view_mode">tree,form,kanban,graph</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="my_project.action_server">
+      <field name="name">My_project server</field>
+      <field name="model_id" ref="model_my_project_my_project"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <menuitem name="My_project" id="my_project.menu_root"   action="my_project.action_window"/>
+
+    <!-- menu categories -->
+
+    <!--<menuitem name="Menu 1" id="my_project.menu_1" parent="my_project.menu_root"/>-->
+    <!--<menuitem name="Menu 2" id="my_project.menu_2" parent="my_project.menu_root"/>-->
+    <!---->
+    <!--&lt;!&ndash; actions &ndash;&gt;-->
+    <!---->
+    <!--<menuitem name="List" id="my_project.menu_1_list" parent="my_project.menu_1"-->
+            <!--/>-->
+    <!---->
+
+  </data>
+</odoo>

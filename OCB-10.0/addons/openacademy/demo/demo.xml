@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+
+        <record model="openacademy.course"  id="mathCourse">
+            <field name="name">Mathematics</field>
+            <field name="Description">Mathematics Desc</field>
+        </record>
+
+        <record model="openacademy.course"  id="javaCourse">
+            <field name="name">Java </field>
+            <field name="Description"> Java Desc</field>
+        </record>
+
+        <record model="openacademy.course"  id="pythonCourse">
+            <field name="name"> Python</field>
+            <field name="Description">Python Desc </field>
+        </record>
+
+    </data>
+</odoo>

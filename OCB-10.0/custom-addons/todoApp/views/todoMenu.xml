@@ -1,0 +1,22 @@
+<!--<?xml version="1.0" encoding="utf-8" ?>-->
+<odoo>
+    <data>
+    <!-- Action to open todoTask -->
+
+    <!--<record model="ir.actions.act_window" id="action_todoapp">-->
+        <!--<field name="name">todoApp</field>-->
+        <!--<field name="res_model">todoapp</field>-->
+        <!--<field name="view_mode">tree,form</field>-->
+    <!--</record>-->
+
+        <act_window id="action_todoapp"
+        name="todoApp"
+        res_model="todoapp"
+        view_mode="tree,form"/>
+
+        <!-- Meni Item to open todoApp -->
+        <menuitem id="menu_todoApp"
+        name="todoMenu"
+        action="action_todoapp"/>
+    </data>
+</odoo>

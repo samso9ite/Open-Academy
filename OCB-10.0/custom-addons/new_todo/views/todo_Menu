@@ -1,0 +1,17 @@
+
+<odoo>
+    <data>
+    <!-- Assigning a view to the todo_app-->
+    <!-- Action to open todo_list -->
+    <act_window id="action_todoView"
+        name = "todoList"
+        res_model="todolist"
+        view_type = "tree,form"
+    />
+
+    <!-- Action to open todoList through the menu-->
+    <menuitem id="menu_item"
+          string ="sdfghjk"
+    />
+</data>
+</odoo>

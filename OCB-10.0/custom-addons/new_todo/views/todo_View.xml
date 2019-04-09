@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+    <record id="new_todo_view" model="ir.ui.view">
+        <field name="name">new_todolist_view</field>
+        <field name="model">todolist</field>
+        <field name="arch" type="xml">
+            <form string="todolist_view">
+                <field name="Name"/>
+                <field name="Is_Done"/>
+                <field name="Active"/>
+            </form>
+        </field>
+    </record>
+    </data>
+</odoo>

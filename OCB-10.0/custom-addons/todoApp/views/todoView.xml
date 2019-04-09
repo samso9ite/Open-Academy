@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+
+<!--<odoo>-->
+    <!--<data>-->
+        <!--<record model="ir.ui.view" id="todoView">-->
+            <!--<field name="name"> Todo View </field>-->
+            <!--<field name="model">todoapp</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="To do list">-->
+                    <!--&lt;!&ndash;<attribute name="string"> To do list</attribute>&ndash;&gt;-->
+                        <!--<group>-->
+                            <!--<field name="name"/>-->
+                            <!--<field name="is_done"/>-->
+                            <!--<field name="active" readonly="1"/>-->
+                        <!--</group>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+    <!--</data>-->
+<!--</odoo>-->
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="todoView">
+            <field name="name">Todo View</field>
+            <field name="model">todoapp</field>
+            <field name="arch" type="xml">
+
+                <form string="To do list">
+                    <sheet>
+                        <header>
+                            <button name="create_task" type="object" class="createTask" string="Create Task"/>
+                            <button name="clear_done" type="object" string=" Clear"/>
+                        </header>
+                        <group name="top_group">
+                            <group name="left_group">
+                                <field name="name"/>
+                            </group>
+                            <group name="right_group">
+                                <field name="is_done"/>
+                                <field name="active" readonly="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tree_view_todoApp" model="ir.ui.view">
+            <field name="name">To do View</field>
+            <field name="model">todoapp</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="is_done==True" decoration-primary="active==True">
+                    <field name="name"/>
+                    <field name="is_done"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="is_done_search" model="ir.ui.view">
+            <field name="name">To do list</field>
+            <field name="model">todoapp</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <filter string="Is Done"
+                    domain="[('is_done','!=',False)]"/>
+                    <filter string="Not Done"
+                            domain="[('is_done','=',False)]"/>
+                    <filter string="All"
+                            domain="[('name','!=','')]"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,65 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <!--<record model="ir.ui.view" id="todoApp.list">-->
+      <!--<field name="name">todoApp list</field>-->
+      <!--<field name="model">todoapp</field>-->
+      <!--<field name="arch" type="xml">-->
+        <!--<tree>-->
+          <!--<field name="name"/>-->
+
+<!--<field name="active" />-->
+          <!--<field name="is_done" />-->
+          <!--&lt;!&ndash;<field name="value"/>&ndash;&gt;-->
+          <!--&lt;!&ndash;<field name="value2"/>&ndash;&gt;-->
+        <!--</tree>-->
+      <!--</field>-->
+    <!--</record>-->
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="todoApp.action_window">
+      <field name="name">todoApp window</field>
+      <field name="res_model">todoapp</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="todoApp.action_server">
+      <field name="name">todoApp server</field>
+      <field name="model_id" ref="model_project2_project2"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <!--<menuitem name="todoApp" id="todoApp.menu_root" action="todoApp.action_window"/>-->
+       <!--<menuitem id="menu_todoApp1"-->
+        <!--name="todoMenu"-->
+                 <!--action="todoApp.action_window"-->
+<!--/>-->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="todoApp.menu_1" parent="todoApp.menu_root"/>
+    <menuitem name="Menu 2" id="todoApp.menu_2" parent="todoApp.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="todoApp.menu_1_list" parent="todoApp.menu_1"
+              action="todoApp.action_window"/>
+    <menuitem name="Server to list" id="todoApp" parent="todoApp.menu_2"
+              action="todoApp.action_server"/>
+    -->
+  </data>
+</odoo>
